@@ -1,48 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FoodExpress</title>
 
-  <style>
-    body{
-      margin:0;
-      background:#111;
-      color:white;
-      font-family:Arial;
-      text-align:center;
-      padding-top:100px;
-    }
-
-    h1{
-      font-size:60px;
-      color:orange;
-    }
-
-    p{
-      font-size:22px;
-      color:#ccc;
-    }
-
-    button{
-      padding:15px 30px;
-      border:none;
-      border-radius:12px;
-      background:orange;
-      color:white;
-      font-size:18px;
-      cursor:pointer;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
 
-  <h1>FoodExpress</h1>
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-8 py-5 border-b border-gray-800">
+    <h1 class="text-3xl font-bold text-orange-500">FoodExpress</h1>
 
-  <p>Modern Full Stack Food Website</p>
+    <nav class="hidden md:flex gap-8 text-gray-300">
+      <a href="#home" class="hover:text-orange-500 transition">Home</a>
+      <a href="#menu" class="hover:text-orange-500 transition">Menu</a>
+      <a href="#about" class="hover:text-orange-500 transition">About</a>
+      <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+    </nav>
 
-  <button>Order Now</button>
+    <button class="bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-xl font-semibold">
+      Order Now
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative flex flex-col items-center justify-center text-center px-6 py-28 overflow-hidden">
+
+    <div class="absolute inset-0 opacity-20 bg-cover bg-center"
+      style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop')">
+    </div>
+
+    <div class="relative z-10 max-w-3xl">
+      <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+        Delicious Food <br /> Delivered Fast
+      </h2>
+
+      <p class="text-gray-300 text-lg mb-8">
+        Modern food website built with HTML, Tailwind CSS and JavaScript.
+      </p>
+
+      <div class="flex gap-4 justify-center flex-wrap">
+        <button class="bg-orange-500 hover:bg-orange-600 px-7 py-3 rounded-2xl font-bold transition">
+          Explore Menu
+        </button>
+
+        <button class="border border-gray-600 hover:border-orange-500 px-7 py-3 rounded-2xl font-bold transition">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="grid md:grid-cols-3 gap-6 px-8 py-16 max-w-7xl mx-auto">
+
+    <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 hover:border-orange-500 transition">
+      <h3 class="text-2xl font-bold mb-4">Fast Delivery</h3>
+      <p class="text-gray-400">
+        Get your favorite food delivered in minutes.
+      </p>
+    </div>
+
+    <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 hover:border-orange-500 transition">
+      <h3 class="text-2xl font-bold mb-4">Fresh Ingredients</h3>
+      <p class="text-gray-400">
+        Premium quality ingredients for every meal.
+      </p>
+    </div>
+
+    <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 hover:border-orange-500 transition">
+      <h3 class="text-2xl font-bold mb-4">Online Orders</h3>
+      <p class="text-gray-400">
+        Easy ordering system with modern UI experience.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="px-8 py-20 bg-zinc-950">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold mb-4">Popular Menu</h2>
+        <p class="text-gray-400 text-lg">
+          Taste our best selling meals.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-black border border-zinc-800 rounded-3xl overflow-hidden hover:scale-105 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop"
+            class="h-64 w-full object-cover"
+          />
+
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold">Classic Burger</h3>
+              <span class="text-orange-500 text-xl font-bold">$12</span>
+            </div>
+
+            <button class="w-full bg-orange-500 hover:bg-orange-600 transition py-3 rounded-2xl font-bold">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-black border border-zinc-800 rounded-3xl overflow-hidden hover:scale-105 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
+            class="h-64 w-full object-cover"
+          />
+
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold">Pepperoni Pizza</h3>
+              <span class="text-orange-500 text-xl font-bold">$18</span>
+            </div>
+
+            <button class="w-full bg-orange-500 hover:bg-orange-600 transition py-3 rounded-2xl font-bold">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-black border border-zinc-800 rounded-3xl overflow-hidden hover:scale-105 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?q=80&w=1200&auto=format&fit=crop"
+            class="h-64 w-full object-cover"
+          />
+
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold">Tacos</h3>
+              <span class="text-orange-500 text-xl font-bold">$10</span>
+            </div>
+
+            <button class="w-full bg-orange-500 hover:bg-orange-600 transition py-3 rounded-2xl font-bold">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="grid md:grid-cols-2 gap-10 items-center px-8 py-24 max-w-7xl mx-auto">
+
+    <div>
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop"
+        class="rounded-3xl shadow-2xl"
+      />
+    </div>
+
+    <div>
+      <h2 class="text-5xl font-bold mb-6">About FoodExpress</h2>
+
+      <p class="text-gray-400 text-lg leading-relaxed mb-6">
+        FoodExpress is a modern restaurant platform designed to provide a premium online food ordering experience.
+      </p>
+
+      <div class="grid grid-cols-2 gap-6 mt-8">
+
+        <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
+          <h3 class="text-3xl font-bold text-orange-500">10K+</h3>
+          <p class="text-gray-400">Happy Customers</p>
+        </div>
+
+        <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
+          <h3 class="text-3xl font-bold text-orange-500">500+</h3>
+          <p class="text-gray-400">Daily Orders</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-8 py-24 bg-zinc-950">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="text-5xl font-bold mb-6">Contact Us</h2>
+
+      <p class="text-gray-400 mb-10 text-lg">
+        Have questions? Get in touch with our team.
+      </p>
+
+      <form class="grid gap-6">
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="bg-black border border-zinc-800 rounded-2xl px-5 py-4 outline-none focus:border-orange-500"
+        />
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="bg-black border border-zinc-800 rounded-2xl px-5 py-4 outline-none focus:border-orange-500"
+        />
+
+        <textarea
+          rows="5"
+          placeholder="Your Message"
+          class="bg-black border border-zinc-800 rounded-2xl px-5 py-4 outline-none focus:border-orange-500"></textarea>
+
+        <button class="bg-orange-500 hover:bg-orange-600 transition py-4 rounded-2xl font-bold text-lg">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800 py-8 text-center text-gray-500">
+    © 2026 FoodExpress — Modern Food Website
+  </footer>
 
 </body>
 </html>
+
+     
